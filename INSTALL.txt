@@ -1,0 +1,27 @@
+## INSTALL.txt
+## for MalProfile.py (version 1.0.0-beta)
+
+(1) INSTALLATION
+----------------
+
+Maltego LocalTransform Installation steps:
+
+1.	Unzip MaltegoTransform.py to MalProfile folder
+2.	Copy mSampleToDNS.py, mDnsToIP.py, mIPtoDomains.py, mDomainsToWhois.py, mGetAllSamples.py, 
+	mfromEmail.py, mfromLikeEmail.py, mfromOwner.py to /root/MalProfile/Maltego folder
+3.	Add the path of /root/MalProfile, /root/MalProfile/Maltego by: PATH=/root/MalProfile:/root/MalProfile/Maltego:$PATH.  (test by: echo $PATH)
+4.	Configure MalProfile.ini (make sure DBNAME contains your database (e.g. c2_PittyTiger.db)
+5.	Test Maltego Local Transform. (e.g. mSampleDNS.py <sample_name>)
+6.	Create new Local Transform in Maltego (Refer to dump screens in ReadMe/Transform for detail parameters)
+6.1 Import new entities MalProfile/Maltego/MyEntities.mtz
+6.2	Create new Transform Sets called MalProfile
+6.3	Create new LocalTransforms: Sample->mSampleToDNS.py, DNS Name->mDnsToIP.py, 
+	c2_address->mIPtoDomains.py, Domain->mDomainToWhois.py and SamplesDB->mGetAllSamples.py, Email Address->mfromEmail.py or mfromLikeEmail.py and registrant->mfromOwner.py
+6.4	Drag a SampleDB and name it as <database_name> at Properties(Description)
+6.5	Test check SampleDB by MalProfile->mGetAllSamples Transform
+
+
+------------------------------
+End of INSTALL.txt
+------------------------------
+

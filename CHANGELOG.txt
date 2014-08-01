@@ -1,0 +1,3 @@
+MalProfile 1.0.0-beta (2014-08-01)
+----------------
+- First beta release
